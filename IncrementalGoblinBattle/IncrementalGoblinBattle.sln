@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncrementalGoblinBattle.UI", "IncrementalGoblinBattle.UI\IncrementalGoblinBattle.UI.csproj", "{3C6496AB-887E-4752-8917-EF4DBCF846DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncrementalGoblinBattle.Models", "IncrementalGoblinBattle.Models\IncrementalGoblinBattle.Models.csproj", "{AB3F4A01-E437-48DE-9DF0-A5CF4FF0D5B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncrementalGoblinBattle.BLL", "IncrementalGoblinBattle.BLL\IncrementalGoblinBattle.BLL.csproj", "{07EA4FF4-5EB2-4115-AA26-FFDE53EF4ADC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncrementalGoblinBattle.Data", "IncrementalGoblinBattle.Data\IncrementalGoblinBattle.Data.csproj", "{E7915F1A-FF7D-42AD-AC14-502AE327F70A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C6496AB-887E-4752-8917-EF4DBCF846DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C6496AB-887E-4752-8917-EF4DBCF846DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C6496AB-887E-4752-8917-EF4DBCF846DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C6496AB-887E-4752-8917-EF4DBCF846DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB3F4A01-E437-48DE-9DF0-A5CF4FF0D5B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB3F4A01-E437-48DE-9DF0-A5CF4FF0D5B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB3F4A01-E437-48DE-9DF0-A5CF4FF0D5B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB3F4A01-E437-48DE-9DF0-A5CF4FF0D5B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07EA4FF4-5EB2-4115-AA26-FFDE53EF4ADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07EA4FF4-5EB2-4115-AA26-FFDE53EF4ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07EA4FF4-5EB2-4115-AA26-FFDE53EF4ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07EA4FF4-5EB2-4115-AA26-FFDE53EF4ADC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7915F1A-FF7D-42AD-AC14-502AE327F70A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7915F1A-FF7D-42AD-AC14-502AE327F70A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7915F1A-FF7D-42AD-AC14-502AE327F70A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7915F1A-FF7D-42AD-AC14-502AE327F70A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B57D79ED-DCE6-4EA3-8EB2-D743B5F726FD}
+	EndGlobalSection
+EndGlobal

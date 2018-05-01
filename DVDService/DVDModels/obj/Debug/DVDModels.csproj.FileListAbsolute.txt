@@ -1,0 +1,11 @@
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\DVDService\DVDModels\bin\Debug\DVDModels.dll
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\DVDService\DVDModels\bin\Debug\DVDModels.pdb
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\DVDService\DVDModels\obj\Debug\DVDModels.csprojResolveAssemblyReference.cache
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\DVDService\DVDModels\obj\Debug\DVDModels.csproj.CoreCompileInputs.cache
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\DVDService\DVDModels\obj\Debug\DVDModels.dll
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\DVDService\DVDModels\obj\Debug\DVDModels.pdb
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\DVDService\DVDModels\bin\Debug\DVDModels.dll.config
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\DVDService\DVDModels\bin\Debug\EntityFramework.dll
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\DVDService\DVDModels\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\DVDService\DVDModels\bin\Debug\EntityFramework.xml
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\DVDService\DVDModels\bin\Debug\EntityFramework.SqlServer.xml

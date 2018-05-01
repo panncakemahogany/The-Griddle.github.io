@@ -1,0 +1,17 @@
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\SGBank\SGBank.Data\bin\Debug\SGBank.Data.dll
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\SGBank\SGBank.Data\bin\Debug\SGBank.Data.pdb
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\SGBank\SGBank.Data\bin\Debug\SGBank.Models.dll
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\SGBank\SGBank.Data\bin\Debug\SGBank.Models.pdb
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\SGBank\SGBank.Data\obj\Debug\SGBank.Data.csprojResolveAssemblyReference.cache
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\SGBank\SGBank.Data\obj\Debug\SGBank.Data.csproj.CoreCompileInputs.cache
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\SGBank\SGBank.Data\obj\Debug\SGBank.Data.dll
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\SGBank\SGBank.Data\obj\Debug\SGBank.Data.pdb
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\SGBank\SGBank.Data\bin\Debug\SGBank.Data.dll.config
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\SGBank\SGBank.Data\bin\Debug\EntityFramework.dll
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\SGBank\SGBank.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\SGBank\SGBank.Data\bin\Debug\SGBank.Models.dll.config
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\SGBank\SGBank.Data\bin\Debug\EntityFramework.xml
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\SGBank\SGBank.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\SGBank\SGBank.Data\obj\Debug\SGBank.Data.Migrations.init.resources
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\SGBank\SGBank.Data\obj\Debug\SGBank.Data.csproj.GenerateResource.Cache
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\SGBank\SGBank.Data\obj\Debug\SGBank.Data.Migrations.init1.resources

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
+    <title>Vending Machine</title>
+  </head>
+  <body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="page-title">
+                    <h1>Vending Machine</h1>
+                    <hr size='5'>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class="col-md-12">
+                <div id="errorMessagesDiv">
+                    <ul class='list-group' id="error-messages"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class='container'>
+                    <div class='row' id='itemsListDiv'>
+                
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="container machineOperator">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="totalCashTitleDiv">
+                                <h3>Total $ In</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <form role='form' class="form-horizontal" id="add-cash-form">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div id="totalCashDisplayDiv">
+                                        <input type="number" id='total-cash-display' readonly/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div id="addDollarButtonDiv">
+                                        <button type="button" id='add-dollar-button' class='btn btn-default btn-sm' onclick='addDollar()'>
+                                            Add Dollar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div id="addQuarterButtonDiv">
+                                        <button type="button" id='add-quarter-button' class='btn btn-default btn-sm' onclick='addQuarter()'>
+                                            Add Quarter
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div id="addDimeButtonDiv">
+                                        <button type="button" id='add-dime-button' class='btn btn-default btn-sm' onclick='addDime()'>
+                                            Add Dime
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div id="addNickelButtonDiv">
+                                        <button type="button" id='add-nickel-button' class='btn btn-default btn-sm' onclick='addNickel()'>
+                                            Add Nickel
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+                <div class="container machineOperator">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="machineMessagesTitleDiv">
+                                <h3>Messages</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <form role='form' class="form-horizontal" id='machine-messages-form'>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div id="machineMessagesDisplayDiv">
+                                        <input type="text" id='machine-messages-display' readonly/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">                        
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div id="itemIdDisplayDiv">
+                                        <label for="item-id-display" id="item-id-display-label">
+                                            <h4>Item:</h4>
+                                        </label>
+                                        <input type="text" id="item-id-display" size='10' readonly/>
+                                        <!--<input type='number' id='total-cash-holder' hidden/>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">                        
+                                    <div id="makePurchaseDiv">
+                                        <button type='button' id='make-purchase-button' class='btn btn-default btn-lg' onclick='makePurchase()'>
+                                            Make Purchase
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="container machineOperator">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="returnChangeTitleDiv">
+                                <h3>Change</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="" class="form-horizontal" id="return-change-form">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div id='displayChangeDiv'>
+                                        <input type="text" id='display-change' readonly/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div id='returnChangeButtonDiv'>
+                                        <button type='button' id='return-change-button' class='btn btn-default btn-lg' onclick='returnChange()'>
+                                            Return Change
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js\jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="home.js"></script>
+  </body>
+</html>

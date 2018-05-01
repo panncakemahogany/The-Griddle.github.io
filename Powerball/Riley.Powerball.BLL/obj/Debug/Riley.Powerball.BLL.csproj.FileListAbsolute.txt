@@ -1,0 +1,6 @@
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Powerball\Riley.Powerball.BLL\bin\Debug\Riley.Powerball.BLL.dll
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Powerball\Riley.Powerball.BLL\bin\Debug\Riley.Powerball.BLL.pdb
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Powerball\Riley.Powerball.BLL\obj\Debug\Riley.Powerball.BLL.csprojResolveAssemblyReference.cache
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Powerball\Riley.Powerball.BLL\obj\Debug\Riley.Powerball.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Powerball\Riley.Powerball.BLL\obj\Debug\Riley.Powerball.BLL.dll
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Powerball\Riley.Powerball.BLL\obj\Debug\Riley.Powerball.BLL.pdb

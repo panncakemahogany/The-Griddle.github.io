@@ -1,0 +1,149 @@
+﻿@model GuildCarsMastery.Models.Domain.Vehicle.Vehicle
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Vehicle Details</h2>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="col-md-12">
+                    <h4>@Model.ProductionYear @Model.Model.Manufacturer.ManufacturerName @Model.Model.NameplateMarque</h4>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        @if (Model.ImageFileName != null && Model.ImageFileName.Length > 0)
+                        {
+                            <img class="img-responsive" src='@Url.Content("~/Images/" + Model.ImageFileName)' />
+                        }
+                        else if (Model.Model.BodyStyle == GuildCarsMastery.Models.Domain.Vehicle.BodyStyle.Car)
+                        {
+                            <img class="img-responsive" src='@Url.Content("~/Images/2050727.png")' />
+                        }
+                        else if (Model.Model.BodyStyle == GuildCarsMastery.Models.Domain.Vehicle.BodyStyle.SUV)
+                        {
+                            <img class="img-responsive" src='@Url.Content("~/Images/car.png")' />
+                        }
+                        else if (Model.Model.BodyStyle == GuildCarsMastery.Models.Domain.Vehicle.BodyStyle.Truck)
+                        {
+                            <img class="img-responsive" src='@Url.Content("~/Images/2050849.png")' />
+                        }
+                        else
+                        {
+                            <img class="img-responsive" src='@Url.Content("~/Images/transport.png")' />
+                        }
+                    </div>
+                    <div class="col-md-9">
+                        <div class="container">
+                            <div class="row">
+                                <div class="panel-group">
+                                    <div class="col-md-2" style="text-align:right;">
+                                        @Html.LabelFor(m => m.Model.BodyStyle, "Body Style", new { @style = "text-align:right;" }):
+                                    </div>
+                                    <div class="col-md-2" style="text-align:left;">
+                                        @Html.DisplayFor(m => m.Model.BodyStyle)
+                                    </div>
+                                </div>
+                                <div class="panel-group">
+                                    <div class="col-md-2" style="text-align:right;">
+                                        @Html.LabelFor(m => m.InteriorColor):
+                                    </div>
+                                    <div class="col-md-2" style="text-align:left;">
+                                        @Html.DisplayFor(m => m.InteriorColor)
+                                    </div>
+                                </div>
+                                <div class="panel-group">
+                                    <div class="col-md-2" style="text-align:right;">
+                                        @Html.LabelFor(m => m.SalePrice, "Sale Price"):
+                                    </div>
+                                    <div class="col-md-2" style="text-align:left;">
+                                        <p style="text-align:left">$@Html.DisplayFor(m => m.SalePrice)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="panel-group">
+                                    <div class="col-md-2" style="text-align:right">
+                                        @Html.Label("Trans:")
+                                    </div>
+                                    <div class="col-md-2" style="text-align:left">
+                                        @if (Model.Transmission)
+                                        {
+                                            <span>Automatic</span>
+                                        }
+                                        else
+                                        {
+                                            <span>Manual</span>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="panel-group">
+                                    <div class="col-md-2" style="text-align:right">
+                                        @Html.LabelFor(m => m.Mileage):
+                                    </div>
+                                    <div class="col-md-2" style="text-align:left">
+                                        @Html.DisplayFor(m => m.Mileage)
+                                    </div>
+                                </div>
+                                <div class="panel-group">
+                                    <div class="col-md-2" style="text-align:right">
+                                        @Html.LabelFor(m => m.MSRP):
+                                    </div>
+                                    <div class="col-md-2" style="text-align:left">
+                                        $@Html.DisplayFor(m => m.MSRP)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="panel-group">
+                                    <div class="col-md-2" style="text-align:right">
+                                        @Html.LabelFor(m => m.ExteriorColor):
+                                    </div>
+                                    <div class="col-md-2" style="text-align:left">
+                                        @Html.DisplayFor(m => m.ExteriorColor)
+                                    </div>
+                                </div>
+                                <div class="panel-group">
+                                    <div class="col-md-2" style="text-align:right">
+                                        @Html.LabelFor(m => m.VIN):
+                                    </div>
+                                    <div class="col-md-2" style="text-align:left">
+                                        @Html.DisplayFor(m => m.VIN)
+                                    </div>
+                                </div>
+                                <div class="panel-group">
+                                    <div class="col-md-2" style="text-align:right">
+
+                                    </div>
+                                    <div class="col-md-2" style="text-align:left">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2" style="text-align:right">
+                                    @Html.LabelFor(m => m.Description):
+                                </div>
+                                <div class="col-md-10" style="text-align:justify">
+                                    @Html.DisplayFor(m => m.Description)
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-md-offset-10">
+                                    @Html.ActionLink("Contact Us", "Contact", "Home", new { }, new { @class = "btn btn-primary" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

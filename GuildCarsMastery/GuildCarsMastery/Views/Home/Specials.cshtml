@@ -1,0 +1,19 @@
+﻿@model System.Collections.Generic.List<GuildCarsMastery.Models.Domain.Business.Special>
+@{
+    ViewBag.Title = "Specials";
+}
+
+<div class="container">
+    <h1>Specials</h1>
+    @foreach (var s in Model)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron panel panel-default" style="border-color:black;border-width:3px;">
+                    <h1>@s.SpecialTitle</h1>
+                    <p>@s.SpecialInformation</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

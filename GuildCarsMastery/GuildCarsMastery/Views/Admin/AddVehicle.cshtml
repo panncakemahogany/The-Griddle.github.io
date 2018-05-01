@@ -1,0 +1,149 @@
+﻿@model GuildCarsMastery.Models.Admin.AdminAddUpdateVehicleVM
+@{
+    ViewBag.Title = "AddVehicle";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Add Vehicle</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        @using (Html.BeginForm("AddVehicle", "Admin", FormMethod.Post))
+        {
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.ManufacturerId, "Make")
+                        @Html.DropDownListFor(m => m.ManufacturerId, Model.Makes, new { @class = "form-control", onchange = "populateDropdown()" })
+                        @Html.ValidationMessageFor(m => m.ManufacturerId)
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.NameplateId, "Model")
+                        @Html.DropDownListFor(m => m.NameplateId, Model.Models, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.NameplateId)
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.ProductionYear, "Year")
+                        @Html.TextBoxFor(m => m.ProductionYear, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ProductionYear)
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.SelectedTransmission, "Transmission")
+                        @Html.DropDownListFor(m => m.SelectedTransmission, Model.Transmissions, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.SelectedTransmission)
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.BodyColor, "Color")
+                        @Html.DropDownListFor(m => m.BodyColor, Model.Exteriors, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.BodyColor)
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.InteriorColor, "Interior")
+                        @Html.DropDownListFor(m => m.InteriorColor, Model.Interiors, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.InteriorColor)
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Mileage)
+                        @Html.TextBoxFor(m => m.Mileage, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Mileage)
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.VIN)
+                        @Html.TextBoxFor(m => m.VIN, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.VIN)
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.MSRP)
+                        @Html.TextBoxFor(m => m.MSRP, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.MSRP)
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.SalePrice, "Sale Price")
+                        @Html.TextBoxFor(m => m.SalePrice, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.SalePrice)
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    @Html.LabelFor(m => m.Description)
+                    @Html.TextAreaFor(m => m.Description, new { @class = "form-control", style = "height:250px;" })
+                    @Html.ValidationMessageFor(m => m.Description)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.ImageFileName, "Picture")
+                        <form method="post" action="/Action" enctype="multipart/form-data">
+                            <input type="file" name="upload">
+                        </form>
+                        @Html.ValidationMessageFor(m => m.ImageFileName)
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+
+        $('document').ready(function () {
+            populateDropdown();
+        });
+
+        function populateDropdown() {
+
+            var makeId = $('#ManufacturerId').val();
+
+            $.ajax({
+                type: 'GET',
+                url: 'http://localhost:55978/values/models/' + makeId,
+                success: function (results) {
+                    $('#NameplateId').empty();
+
+                    $.each(results, function (index, item) {
+                        var line = '<option value="' + item.NameplateId + '">' + item.NameplateMarque + '</option>';
+
+                        $('#NameplateId').append(line);
+                    });
+                }
+            });
+
+        }
+
+    </script>
+}

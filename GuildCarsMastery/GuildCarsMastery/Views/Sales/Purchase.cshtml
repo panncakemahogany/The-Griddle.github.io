@@ -1,0 +1,214 @@
+﻿@model GuildCarsMastery.Models.Sales.SalesPurchaseVM
+@{
+    ViewBag.Title = "Purchase";
+}
+
+<div class="row">
+    <h2>Purchase Vehicle</h2>
+</div>
+
+<div class="row">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="col-md-12">
+                <h4>@Model.Vehicle.ProductionYear @Model.Vehicle.Model.Manufacturer.ManufacturerName @Model.Vehicle.Model.NameplateMarque</h4>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3">
+                    @if (Model.Vehicle.Model.BodyStyle == GuildCarsMastery.Models.Domain.Vehicle.BodyStyle.Car)
+                    {
+                        <img class="img-responsive" src='@Url.Content("~/Images/2050727.png")' />
+                    }
+                    else if (Model.Vehicle.Model.BodyStyle == GuildCarsMastery.Models.Domain.Vehicle.BodyStyle.SUV)
+                    {
+                        <img class="img-responsive" src='@Url.Content("~/Images/car.png")' />
+                    }
+                    else if (Model.Vehicle.Model.BodyStyle == GuildCarsMastery.Models.Domain.Vehicle.BodyStyle.Truck)
+                    {
+                        <img class="img-responsive" src='@Url.Content("~/Images/2050849.png")' />
+                    }
+                    else
+                    {
+                        <img class="img-responsive" src='@Url.Content("~/Images/transport.png")' />
+                    }
+                </div>
+                <div class="col-md-9">
+                    <div class="container">
+                        <div class="row">
+                            <div class="panel-group">
+                                <div class="col-md-2" style="text-align:right;">
+                                    @Html.LabelFor(m => m.Vehicle.Model.BodyStyle, "Body Style", new { @style = "text-align:right;" }):
+                                </div>
+                                <div class="col-md-2" style="text-align:left;">
+                                    @Html.DisplayFor(m => m.Vehicle.Model.BodyStyle)
+                                </div>
+                            </div>
+                            <div class="panel-group">
+                                <div class="col-md-2" style="text-align:right;">
+                                    @Html.LabelFor(m => m.Vehicle.Interior):
+                                </div>
+                                <div class="col-md-2" style="text-align:left;">
+                                    @Html.DisplayFor(m => m.Vehicle.Interior)
+                                </div>
+                            </div>
+                            <div class="panel-group">
+                                <div class="col-md-2" style="text-align:right;">
+                                    @Html.LabelFor(m => m.Vehicle.SalePrice, "Sale Price"):
+                                </div>
+                                <div class="col-md-2" style="text-align:left;">
+                                    <p style="text-align:left">$@Html.DisplayFor(m => m.Vehicle.SalePrice)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="panel-group">
+                                <div class="col-md-2" style="text-align:right">
+                                    @Html.Label("Trans:")
+                                </div>
+                                <div class="col-md-2" style="text-align:left">
+                                    @if (Model.Vehicle.Transmission)
+                                    {
+                                        <span>Automatic</span>
+                                    }
+                                    else
+                                    {
+                                        <span>Manual</span>
+                                    }
+                                </div>
+                            </div>
+                            <div class="panel-group">
+                                <div class="col-md-2" style="text-align:right">
+                                    @Html.LabelFor(m => m.Vehicle.Mileage):
+                                </div>
+                                <div class="col-md-2" style="text-align:left">
+                                    @Html.DisplayFor(m => m.Vehicle.Mileage)
+                                </div>
+                            </div>
+                            <div class="panel-group">
+                                <div class="col-md-2" style="text-align:right">
+                                    @Html.LabelFor(m => m.Vehicle.MSRP):
+                                </div>
+                                <div class="col-md-2" style="text-align:left">
+                                    $@Html.DisplayFor(m => m.Vehicle.MSRP)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="panel-group">
+                                <div class="col-md-2" style="text-align:right">
+                                    @Html.LabelFor(m => m.Vehicle.Color):
+                                </div>
+                                <div class="col-md-2" style="text-align:left">
+                                    @Html.DisplayFor(m => m.Vehicle.Color)
+                                </div>
+                            </div>
+                            <div class="panel-group">
+                                <div class="col-md-2" style="text-align:right">
+                                    @Html.LabelFor(m => m.Vehicle.VIN):
+                                </div>
+                                <div class="col-md-2" style="text-align:left">
+                                    @Html.DisplayFor(m => m.Vehicle.VIN)
+                                </div>
+                            </div>
+                            <div class="panel-group">
+                                <div class="col-md-2" style="text-align:right">
+
+                                </div>
+                                <div class="col-md-2" style="text-align:left">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2" style="text-align:right">
+                                @Html.LabelFor(m => m.Vehicle.Description):
+                            </div>
+                            <div class="col-md-10" style="text-align:justify">
+                                @Html.DisplayFor(m => m.Vehicle.Description)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Sales Information</h2>
+        </div>
+        <div class="col-md-9">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        @Html.LabelFor(m => m.Name)
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Name)
+                    </div>
+                    <div class="col-md-6 form-group">
+                        @Html.LabelFor(m => m.Phone)
+                        @Html.TextBoxFor(m => m.Phone, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Phone)
+                    </div>
+                    <div class="col-md-6 form-group">
+                        @Html.LabelFor(m => m.Email)
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Email)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        @Html.LabelFor(m => m.Street1, "Street 1")
+                        @Html.TextBoxFor(m => m.Street1, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Street1)
+                    </div>
+                    <div class="col-md-6 form-group">
+                        @Html.LabelFor(m => m.Street2, "Street 2")
+                        @Html.TextBoxFor(m => m.Street2, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Street2)
+                    </div>
+                    <div class="col-md-6 form-group">
+                        @Html.LabelFor(m => m.City)
+                        @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.City)
+                    </div>
+                    <div class="col-md-6 form-group">
+                        @Html.LabelFor(m => m.StateId, "State")
+                        @Html.TextBoxFor(m => m.StateId, new { @class = "form-control" })
+                        @*@Html.DropDownListFor(m => m.StateId, Model.AvailableStates, new { @class = "form-control" })*@
+                        @Html.ValidationMessageFor(m => m.StateId)
+                    </div>
+                    <div class="col-md-6 form-group">
+                        @Html.LabelFor(m => m.Zipcode)
+                        @Html.TextBoxFor(m => m.Zipcode, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Zipcode)
+                    </div>
+                </div>
+                <div class="row">
+                    <hr style="border-top:5px double #000000;margin-right:-320px;" />
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        @Html.LabelFor(m => m.PurchasePrice, "Purchase Price")
+                        @Html.TextBoxFor(m => m.PurchasePrice, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.PurchasePrice)
+                    </div>
+                    <div class="col-md-6 form-group">
+                        @Html.LabelFor(m => m.PurchaseTypeId, "Purchase Type")
+                        @Html.TextBoxFor(m => m.PurchaseTypeId, new { @class = "form-control" })
+                        @*@Html.DropDownListFor(m => m.PurchaseTypeId, Model.AvailablePurchaseTypes, new { @class = "form-control" })*@
+                        @Html.ValidationMessageFor(m => m.PurchaseTypeId)
+                    </div>
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><p class="navbar-brand" style="color: #ffffff; background-color: transparent;">|</p></li>
+                    <li>@Html.ActionLink("New Inventory", "New", "Inventory", new { area = "" }, new { @class = "navbar-brand" })</li>
+                    <li><p class="navbar-brand" style="color: #ffffff; background-color: transparent;">|</p></li>
+                    <li>@Html.ActionLink("Used Inventory", "Used", "Inventory", new { area = "" }, new { @class = "navbar-brand" })</li>
+                    <li><p class="navbar-brand" style="color: #ffffff; background-color: transparent;">|</p></li>
+                    <li>@Html.ActionLink("Specials", "Specials", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
+                    <li><p class="navbar-brand" style="color: #ffffff; background-color: transparent;">|</p></li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
+                    @if (Request.IsAuthenticated && User.IsInRole("Sales") || User.IsInRole("Admin"))
+                    {
+                        <li><p class="navbar-brand" style="color: #ffffff; background-color: transparent;">|</p></li>
+                        <li>@Html.ActionLink("Sales", "Index", "Sales", new { area = "" }, new { @class = "navbar-brand" })</li>
+                        if (User.IsInRole("Admin"))
+                        {
+                            <li><p class="navbar-brand" style="color: #ffffff; background-color: transparent;">|</p></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
+                                <ul class="dropdown-menu" style="margin-left:-15px;">
+                                    <li>@Html.ActionLink("Vehicle Inventory", "Vehicles", "Admin")</li>
+                                    <li>@Html.ActionLink("Available Makes", "Makes", "Admin")</li>
+                                    <li>@Html.ActionLink("Available Models", "Models", "Admin")</li>
+                                    <li>@Html.ActionLink("Specials", "Specials", "Admin")</li>
+                                    <li>@Html.ActionLink("Users", "Users", "Admin")</li>
+                                    <li>@Html.ActionLink("Reports", "Index", "Reports")</li>
+                                </ul>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @if (IsSectionDefined("Scripts"))
+    {
+        @RenderSection("Scripts")
+    }
+</body>
+</html>

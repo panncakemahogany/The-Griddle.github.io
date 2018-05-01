@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<hr />
+@Html.ActionLink("Commence Skirmish", "Commence", "Skirmish", new { }, new { @class = "btn btn-danger" })
+
+<input type="text" id="displayInterval" onclick="RunGame()" readonly />

@@ -1,0 +1,43 @@
+﻿@model GuildCarsMastery.Models.Home.HomeContactVM
+@{
+    ViewBag.Title = "Contact";
+}
+
+<h2>Contact Us</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        @using (Html.BeginForm())
+        {
+            <div class="form-group">
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Name)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Email)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Phone)
+                @Html.TextBoxFor(m => m.Phone, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Phone)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Message)
+                @Html.TextAreaFor(m => m.Message, new { @class = "form-control", style = "height:290px;" })
+                @Html.ValidationMessageFor(m => m.Message)
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        }
+    </div>
+    <div class="col-md-6">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.2627548497094!2d-93.27401168422469!3d44.97897317370944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b332907d76198f%3A0x47305550cfd48180!2sThe+Software+Guild!5e0!3m2!1sen!2sus!4v1522879260126" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <p>#600, 15 S 5th St</p>
+        <p>Minneapolis, MN 55402</p>
+        <br />
+        <p>Sales : 111-111-1111</p>
+        <p>Service : 111-111-1112</p>
+    </div>
+</div>

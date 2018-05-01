@@ -1,0 +1,11 @@
+D:\Git\Curriculum\dotnet\ObjectOrientedProgramming\01-Basics\Assessments\Warmups\Start\Warmups.BLL\bin\Debug\Warmups.BLL.dll
+D:\Git\Curriculum\dotnet\ObjectOrientedProgramming\01-Basics\Assessments\Warmups\Start\Warmups.BLL\bin\Debug\Warmups.BLL.pdb
+D:\Git\Curriculum\dotnet\ObjectOrientedProgramming\01-Basics\Assessments\Warmups\Start\Warmups.BLL\obj\Debug\Warmups.BLL.csprojResolveAssemblyReference.cache
+D:\Git\Curriculum\dotnet\ObjectOrientedProgramming\01-Basics\Assessments\Warmups\Start\Warmups.BLL\obj\Debug\Warmups.BLL.dll
+D:\Git\Curriculum\dotnet\ObjectOrientedProgramming\01-Basics\Assessments\Warmups\Start\Warmups.BLL\obj\Debug\Warmups.BLL.pdb
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Warmups\Warmups.BLL\obj\Debug\Warmups.BLL.csprojResolveAssemblyReference.cache
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Warmups\Warmups.BLL\obj\Debug\Warmups.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Warmups\Warmups.BLL\obj\Debug\Warmups.BLL.dll
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Warmups\Warmups.BLL\obj\Debug\Warmups.BLL.pdb
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Warmups\Warmups.BLL\bin\Debug\Warmups.BLL.dll
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Warmups\Warmups.BLL\bin\Debug\Warmups.BLL.pdb

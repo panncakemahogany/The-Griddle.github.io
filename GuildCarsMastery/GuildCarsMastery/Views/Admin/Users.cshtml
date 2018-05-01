@@ -1,0 +1,47 @@
+﻿@model GuildCarsMastery.Models.Admin.AdminUsersVM
+@{
+    ViewBag.Title = "Users";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Users</h2>
+
+            <h4><ins>@Html.ActionLink("Add a new User", "AddUser", "Admin")</ins></h4>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class=" table table-bordered table-striped" style="border-color:black;border-width:5px;">
+                <tr>
+                    <th>Last Name</th>
+                    <th>First Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th></th>
+                </tr>
+                @foreach (var u in Model.Users)
+                {
+                    <tr>
+                        <td>@u.LastName</td>
+                        <td>@u.FirstName</td>
+                        <td>@u.Email</td>
+                        @foreach (var r in u.Roles)
+                        {
+                            foreach (var o in Model.Roles)
+                            {
+                                if (r.RoleId == o.Id)
+                                {
+                                    <td>@o.Name</td>
+                                }
+                            }
+                        }
+                        <td>@Html.ActionLink("Edit", "EditUser", new { userId = u.Id }, new { @class = "btn btn-primary" })</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>

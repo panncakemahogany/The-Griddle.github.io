@@ -1,0 +1,8 @@
+C:\Repos\The-Griddle.github.io\IncrementalGoblinBattle\IncrementalGoblinBattle.Models\bin\Debug\IncrementalGoblinBattle.Models.dll
+C:\Repos\The-Griddle.github.io\IncrementalGoblinBattle\IncrementalGoblinBattle.Models\bin\Debug\IncrementalGoblinBattle.Models.pdb
+C:\Repos\The-Griddle.github.io\IncrementalGoblinBattle\IncrementalGoblinBattle.Models\bin\Debug\IncrementalGoblinBattle.BLL.dll
+C:\Repos\The-Griddle.github.io\IncrementalGoblinBattle\IncrementalGoblinBattle.Models\bin\Debug\IncrementalGoblinBattle.BLL.pdb
+C:\Repos\The-Griddle.github.io\IncrementalGoblinBattle\IncrementalGoblinBattle.Models\obj\Debug\IncrementalGoblinBattle.Models.csprojResolveAssemblyReference.cache
+C:\Repos\The-Griddle.github.io\IncrementalGoblinBattle\IncrementalGoblinBattle.Models\obj\Debug\IncrementalGoblinBattle.Models.csproj.CoreCompileInputs.cache
+C:\Repos\The-Griddle.github.io\IncrementalGoblinBattle\IncrementalGoblinBattle.Models\obj\Debug\IncrementalGoblinBattle.Models.dll
+C:\Repos\The-Griddle.github.io\IncrementalGoblinBattle\IncrementalGoblinBattle.Models\obj\Debug\IncrementalGoblinBattle.Models.pdb

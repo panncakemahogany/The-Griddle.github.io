@@ -1,0 +1,215 @@
+﻿@model PowerballMVC.Models.Ticket
+@{
+    ViewBag.Title = "GrabBalls";
+}
+
+<br />
+<br />
+<br />
+
+@{
+    var oneThroughSixtyNine = Enumerable.Range(1, 69);
+    var powerballRange = Enumerable.Range(1, 26);
+}
+
+@using (Html.BeginForm("GrabBalls", "Home", FormMethod.Post))
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="well" style="width:280px; height:35px; font-size:20px; background-color:red; color:white; font-weight:bold; text-align:center; padding: 1px 1px 1px 1px;">Name</div>
+                @*@Html.LabelFor(t => t.Name, new { @style = "font-size:36px; padding-left:91px; padding-right:91px; background-color:red;", @class = "label" })*@
+                @Html.TextBoxFor(t => t.Name, new { @class = "form-control", placeholder = "Name" })
+            </div>
+            <div class="col-md-4">
+                <button type="submit" class="btn" style="font-size:36px; padding:18.5px 40px 18.5px 40px; background-color:red; color:white; font-weight:bold;">Auto-Ticket</button>
+            </div>
+            <div class="col-md-4">
+                <button type="submit" class="btn" style="font-size:36px; padding:18.5px 40px 18.5px 40px; background-color:red; color:white; font-weight:bold;">Purchase Ticket</button>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-md-2">
+                @Html.LabelFor(t => t.FirstBall, "First Pick", new { @style = "font-size:20px; padding-left:35px; padding-right:35px; background-color:red;", @class = "label" })
+                <br />
+                <br />
+                @Html.DropDownListFor(t => t.FirstBall, oneThroughSixtyNine.Select(n => new SelectListItem { Text = n.ToString(), Value = n.ToString() }), new { @class = "form-control", placeholder = "First Ball", id = "first", oninput = "firstSelected()" })
+                <br />
+                <button type="button" class="btn" style="font-size:20px; background-color:red; color:white; font-weight:bold; padding: 1px 32.33px 1px 32.33px;">Auto-Pick</button>
+            </div>
+            <div class="col-md-2">
+                @Html.LabelFor(t => t.SecondBall, "Second Pick", new { @style = "font-size:20px; padding-left:21px; padding-right:21px; background-color:red;", @class = "label" })
+                <br />
+                <br />
+                @Html.DropDownListFor(t => t.SecondBall, oneThroughSixtyNine.Select(n => new SelectListItem { Text = n.ToString(), Value = n.ToString() }), new { @class = "form-control", placeholder = "Second Ball", id = "second", oninput = "secondSelected()" })
+                <br />
+                <button type="button" class="btn" style="font-size:20px; background-color:red; color:white; font-weight:bold; padding: 1px 32.33px 1px 32.33px;">Auto-Pick</button>
+            </div>
+            <div class="col-md-2">
+                @Html.LabelFor(t => t.ThirdBall, "Third Pick", new { @style = "font-size:20px; padding-left:32px; padding-right:32px; background-color:red;", @class = "label" })
+                <br />
+                <br />
+                @Html.DropDownListFor(t => t.ThirdBall, oneThroughSixtyNine.Select(n => new SelectListItem { Text = n.ToString(), Value = n.ToString() }), new { @class = "form-control", placeholder = "Third Ball", id = "third", oninput = "thirdSelected()" })
+                <br />
+                <button type="button" class="btn" style="font-size:20px; background-color:red; color:white; font-weight:bold; padding: 1px 32.33px 1px 32.33px;">Auto-Pick</button>
+            </div>
+            <div class="col-md-2">
+                @Html.LabelFor(t => t.FourthBall, "Fourth Pick", new { @style = "font-size:20px; padding-left:25px; padding-right:25px; background-color:red;", @class = "label" })
+                <br />
+                <br />
+                @Html.DropDownListFor(t => t.FourthBall, oneThroughSixtyNine.Select(n => new SelectListItem { Text = n.ToString(), Value = n.ToString() }), new { @class = "form-control", placeholder = "Fourth Ball", id = "fourth", oninput = "fourthSelected()" })
+                <br />
+                <button type="button" class="btn" style="font-size:20px; background-color:red; color:white; font-weight:bold; padding: 1px 32.33px 1px 32.33px;">Auto-Pick</button>
+            </div>
+            <div class="col-md-2">
+                @Html.LabelFor(t => t.FifthBall, "Fifth Pick", new { @style = "font-size:20px; padding-left:35px; padding-right:35px; background-color:red;", @class = "label" })
+                <br />
+                <br />
+                @Html.DropDownListFor(t => t.FifthBall, oneThroughSixtyNine.Select(n => new SelectListItem { Text = n.ToString(), Value = n.ToString() }), new { @class = "form-control", placeholder = "Fifth Ball", id = "fifth", oninput = "fifthSelected()" })
+                <br />
+                <button type="button" class="btn" style="font-size:20px; background-color:red; color:white; font-weight:bold; padding: 1px 32.33px 1px 32.33px;">Auto-Pick</button>
+            </div>
+            <div class="col-md-2">
+                @Html.LabelFor(t => t.PowerBall, "Powerball", new { @style = "font-size:20px; padding-left:33px; padding-right:33px; background-color:red;", @class = "label" })
+                <br />
+                <br />
+                @Html.DropDownListFor(t => t.PowerBall, powerballRange.Select(n => new SelectListItem { Text = n.ToString(), Value = n.ToString() }), new { @class = "form-control", placeholder = "Powerball", id = "power" })
+                <br />
+                <button type="button" class="btn" style="font-size:20px; background-color:red; color:white; font-weight:bold; padding: 1px 32.33px 1px 32.33px;">Auto-Pick</button>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+
+    <script>
+
+        var first = document.getElementById("first");
+        var second = document.getElementById("second");
+        var third = document.getElementById("third");
+        var fourth = document.getElementById("fourth");
+        var fifth = document.getElementById("fifth");
+
+        var firstIndex = "";
+        var secondIndex = "";
+        var thirdIndex = "";
+        var fourthIndex = "";
+        var fifthIndex = "";
+
+        function firstSelected() {
+            var index = first.selectedIndex;
+            removeSelectItemListValue(index, "first");
+        }
+
+        function secondSelected() {
+            var index = second.selectedIndex;
+            removeSelectItemListValue(index, "second");
+        }
+
+        function thirdSelected() {
+            var index = third.selectedIndex;
+            removeSelectItemListValue(index, "third");
+        }
+
+        function fourthSelected() {
+            var index = fourth.selectedIndex;
+            removeSelectItemListValue(index, "fourth");
+        }
+
+        function fifthSelected() {
+            var index = fifth.selectedIndex;
+            removeSelectItemListValue(index, "fifth");
+        }
+
+        function removeSelectItemListValue(index, id) {
+            switch (id) {
+                case "first":
+                    second.options.item(index).disabled = true;
+                    third.options.item(index).disabled = true;
+                    fourth.options.item(index).disabled = true;
+                    fifth.options.item(index).disabled = true;
+                    if (firstIndex == "") {
+                        firstIndex = first.value;
+                    }
+                    else if (first.value != firstIndex.value) {
+                        second.options.item(Number(firstIndex) - 1).disabled = false;
+                        third.options.item(Number(firstIndex) - 1).disabled = false;
+                        fourth.options.item(Number(firstIndex) - 1).disabled = false;
+                        fifth.options.item(Number(firstIndex) - 1).disabled = false;
+                        firstIndex = first.value;
+                    }
+                    break;
+                case "second":
+                    first.options.item(index).disabled = true;
+                    third.options.item(index).disabled = true;
+                    fourth.options.item(index).disabled = true;
+                    fifth.options.item(index).disabled = true;
+                    if (secondIndex == "") {
+                        secondIndex = second.value;
+                    }
+                    else if (second.value != secondIndex.value) {
+                        first.options.item(Number(secondIndex) - 1).disabled = false;
+                        third.options.item(Number(secondIndex) - 1).disabled = false;
+                        fourth.options.item(Number(secondIndex) - 1).disabled = false;
+                        fifth.options.item(Number(secondIndex) - 1).disabled = false;
+                        secondIndex = second.value;
+                    }
+                    break;
+                case "third":
+                    second.options.item(index).disabled = true;
+                    first.options.item(index).disabled = true;
+                    fourth.options.item(index).disabled = true;
+                    fifth.options.item(index).disabled = true;
+                    if (thirdIndex == "") {
+                        thirdIndex = third.value;
+                    }
+                    else if (third.value != thirdIndex.value) {
+                        second.options.item(Number(thirdIndex) - 1).disabled = false;
+                        first.options.item(Number(thirdIndex) - 1).disabled = false;
+                        fourth.options.item(Number(thirdIndex) - 1).disabled = false;
+                        fifth.options.item(Number(thirdIndex) - 1).disabled = false;
+                        thirdIndex = third.value;
+                    }
+                    break;
+                case "fourth":
+                    second.options.item(index).disabled = true;
+                    third.options.item(index).disabled = true;
+                    first.options.item(index).disabled = true;
+                    fifth.options.item(index).disabled = true;
+                    if (fourthIndex == "") {
+                        fourthIndex = fourth.value;
+                    }
+                    else if (fourth.value != fourthIndex.value) {
+                        second.options.item(Number(fourthIndex) - 1).disabled = false;
+                        third.options.item(Number(fourthIndex) - 1).disabled = false;
+                        first.options.item(Number(fourthIndex) - 1).disabled = false;
+                        fifth.options.item(Number(fourthIndex) - 1).disabled = false;
+                        fourthIndex = fourth.value;
+                    }
+                    break;
+                case "fifth":
+                    second.options.item(index).disabled = true;
+                    third.options.item(index).disabled = true;
+                    fourth.options.item(index).disabled = true;
+                    first.options.item(index).disabled = true;
+                    if (fifthIndex == "") {
+                        fifthIndex = fifth.value;
+                    }
+                    else if (fifth.value != fifthIndex.value) {
+                        second.options.item(Number(fifthIndex) - 1).disabled = false;
+                        third.options.item(Number(fifthIndex) - 1).disabled = false;
+                        fourth.options.item(Number(fifthIndex) - 1).disabled = false;
+                        first.options.item(Number(fifthIndex) - 1).disabled = false;
+                        fifthIndex = fifth.value;
+                    }
+                    break;
+            }
+        }
+
+    </script>
+
+}

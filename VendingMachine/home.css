@@ -1,0 +1,20 @@
+body, .form-group, #page-title, #totalCashTitleDiv, #machineMessagesTitleDiv, #returnChangeTitleDiv, #total-cash-display, #item-id-display, #machine-messages-display, #display-change{
+    text-align: center;
+}
+.itemDisplay {
+    padding-bottom: 50px;
+    border-style: double;
+    border-width: 5px;
+}
+
+.machineOperator {
+    border-style: double;
+    border-width: 5px;
+}
+
+hr {
+    color: black;
+    border-style: double;
+    border-width: 5px;
+    border-color: black;
+}

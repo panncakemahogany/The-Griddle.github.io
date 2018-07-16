@@ -1,0 +1,6 @@
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Flooring.UI\Flooring.Models\bin\Debug\Flooring.Models.dll
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Flooring.UI\Flooring.Models\bin\Debug\Flooring.Models.pdb
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Flooring.UI\Flooring.Models\obj\Debug\Flooring.Models.csproj.CoreCompileInputs.cache
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Flooring.UI\Flooring.Models\obj\Debug\Flooring.Models.dll
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Flooring.UI\Flooring.Models\obj\Debug\Flooring.Models.pdb
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Flooring.UI\Flooring.Models\obj\Debug\Flooring.Models.csprojResolveAssemblyReference.cache

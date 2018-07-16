@@ -1,0 +1,8 @@
+D:\Git\Curriculum\dotnet\ObjectOrientedProgramming\01-Basics\Assessments\Factorizor\Start\Factorizor\Factorizor\bin\Debug\Factorizor.exe.config
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Factorizer\Factorizor\bin\Debug\Factorizor.exe.config
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Factorizer\Factorizor\bin\Debug\Factorizor.exe
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Factorizer\Factorizor\bin\Debug\Factorizor.pdb
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Factorizer\Factorizor\obj\Debug\Factorizor.csproj.CoreCompileInputs.cache
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Factorizer\Factorizor\obj\Debug\Factorizor.exe
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Factorizer\Factorizor\obj\Debug\Factorizor.pdb
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\Factorizer\Factorizor\obj\Debug\Factorizor.csprojResolveAssemblyReference.cache

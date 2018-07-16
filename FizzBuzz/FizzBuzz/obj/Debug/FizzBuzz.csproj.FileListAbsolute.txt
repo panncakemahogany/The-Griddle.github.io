@@ -1,0 +1,8 @@
+D:\Git\Curriculum\dotnet\ObjectOrientedProgramming\01-Basics\Assessments\FizzBuzz\Start\FizzBuzz\bin\Debug\FizzBuzz.exe.config
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\FizzBuzz\FizzBuzz\bin\Debug\FizzBuzz.exe.config
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\FizzBuzz\FizzBuzz\bin\Debug\FizzBuzz.exe
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\FizzBuzz\FizzBuzz\bin\Debug\FizzBuzz.pdb
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\FizzBuzz\FizzBuzz\obj\Debug\FizzBuzz.csprojResolveAssemblyReference.cache
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\FizzBuzz\FizzBuzz\obj\Debug\FizzBuzz.csproj.CoreCompileInputs.cache
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\FizzBuzz\FizzBuzz\obj\Debug\FizzBuzz.exe
+C:\Users\Panncake\source\repos\riley-gartner-individual-work\FizzBuzz\FizzBuzz\obj\Debug\FizzBuzz.pdb

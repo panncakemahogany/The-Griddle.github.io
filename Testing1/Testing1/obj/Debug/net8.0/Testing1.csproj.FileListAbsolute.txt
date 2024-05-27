@@ -1,0 +1,14 @@
+D:\source\repo\Testing1\Testing1\bin\Debug\net8.0\Testing1.exe
+D:\source\repo\Testing1\Testing1\bin\Debug\net8.0\Testing1.deps.json
+D:\source\repo\Testing1\Testing1\bin\Debug\net8.0\Testing1.runtimeconfig.json
+D:\source\repo\Testing1\Testing1\bin\Debug\net8.0\Testing1.dll
+D:\source\repo\Testing1\Testing1\bin\Debug\net8.0\Testing1.pdb
+D:\source\repo\Testing1\Testing1\obj\Debug\net8.0\Testing1.GeneratedMSBuildEditorConfig.editorconfig
+D:\source\repo\Testing1\Testing1\obj\Debug\net8.0\Testing1.AssemblyInfoInputs.cache
+D:\source\repo\Testing1\Testing1\obj\Debug\net8.0\Testing1.AssemblyInfo.cs
+D:\source\repo\Testing1\Testing1\obj\Debug\net8.0\Testing1.csproj.CoreCompileInputs.cache
+D:\source\repo\Testing1\Testing1\obj\Debug\net8.0\Testing1.dll
+D:\source\repo\Testing1\Testing1\obj\Debug\net8.0\refint\Testing1.dll
+D:\source\repo\Testing1\Testing1\obj\Debug\net8.0\Testing1.pdb
+D:\source\repo\Testing1\Testing1\obj\Debug\net8.0\Testing1.genruntimeconfig.cache
+D:\source\repo\Testing1\Testing1\obj\Debug\net8.0\ref\Testing1.dll

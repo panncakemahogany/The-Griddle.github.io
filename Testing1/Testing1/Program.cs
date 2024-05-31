@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using Testing1.Data;
 
 namespace Testing1
 {
@@ -182,51 +183,13 @@ public class TestClass
             Console.WriteLine("Error input not able to be parsed");
         }
     }
-}
 
-public class DataManager
-{
-    //read from txt file
-    public static DataPackage Read()
+    public void SaveRecallDataUI()
     {
-        return new DataPackage();
+        Console.WriteLine("ENTER TEXT");
+        string userInputString = Console.ReadLine();
+        Console.WriteLine("ENTER NUMBER");
+        List<string> strings = new List<string>();
+        
     }
-
-    //write to txt file
-    public static void Write(DataPackage dataPackage)
-    {
-
-    }
-
-    //create text file to read and write to
-    public static void PathDirectory()
-    {
-        string path = "C:\\Temp\\Bingo\\Bongo";
-        if (Directory.Exists(path))
-        {
-            Console.WriteLine("The directory already exists");
-        }
-        else
-        {
-            DirectoryInfo directory = Directory.CreateDirectory(path);
-            Console.WriteLine("A directory was created for data management");
-        }
-        if (File.Exists(filePath))
-        {
-            Console.WriteLine("The database file already exists");
-        }
-        else
-        {
-            File.Create(filePath);
-            Console.WriteLine("A database file was created for this program's memory usage");
-        }
-        Console.WriteLine("Hit enter to continue");
-        Console.ReadLine();
-    }
-    public static string filePath = "C:\\Temp\\Bingo\\Bongo\\test.txt";
-}
-
-public class DataPackage
-{
-
 }
